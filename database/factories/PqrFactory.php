@@ -17,8 +17,9 @@ class PqrFactory extends Factory
     public function definition(): array
     {
         return [
-            'sugerencia'=>fake()->text(200),
-            'tipo_suge'=>fake()->randomElement(['queja', 'reclamo','sugerencia','peticion']),
+            'hechos'=>fake()->text(200),
+            'pretensiones'=>fake()->text(200),
+            'tipo_suge'=>fake()->randomElement(['Quejas', 'Reclamacion','Sugerencia','Felicitacion']),
             'estado'=>fake()->randomElement(['registrada', 'en curso','resuelta']),
             'user_id'=>\App\Models\User::pluck('id')->random()
         ];
